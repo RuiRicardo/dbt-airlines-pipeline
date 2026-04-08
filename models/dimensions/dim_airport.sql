@@ -2,10 +2,10 @@ with airports as (
     select * from {{ ref('stg_airports') }}
 )
 
-select
+SELECT
     iata_code,
     airport_name,
     city,
     state,
-    country as country
+    country
 from airports
